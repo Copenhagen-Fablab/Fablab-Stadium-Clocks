@@ -10,7 +10,10 @@
 
     The code has the primary function shiftSignNumber(int), which correctly displays any number that fits on the display.
 
-    To use more than one stadium sign in series, change the variable 'signLen' to match the total digits of the combined sign
+    To use more than one stadium sign in series, change the variable 'signLen' to match the total digits of the combined sign.
+
+    More info and latest version at 
+    https://github.com/EmilBjorn/Copenhagen-Fablab-Stadium-Clock
     ####################################*/
 
 //Pin connected to latch pin (STR) of HEF4094B
