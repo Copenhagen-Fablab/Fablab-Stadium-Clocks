@@ -9,6 +9,7 @@
     The output voltage is amplified from the output of the bit shift registers to 12V in subsequent four darlington arrays.
 
     The code has the primary function shiftSignNumber(int), which correctly displays any number that fits on the display.
+    If the number doesn't fit on the display, the least significant digits will be shown.
 
     To use more than one stadium sign in series, change the variable 'signLen' to match the total digits of the combined sign.
 
@@ -41,7 +42,7 @@ void setup()
 
 void loop()
 {
-// Code to determine which number to display goes here. Use shiftSignNumber(x) to display number x
+    // Code to determine which number to display goes here. Use shiftSignNumber(x) to display number x
     for (int i = 0; i < pow(10, signLen); i++)
     {
         shiftSignNumber(i);
@@ -92,7 +93,7 @@ void shiftTwoDigits(int num)
     }
 }
 
-// shiftSignNumber takes in any integer number and display the last 'signLen' digits on the display
+// shiftSignNumber takes in any integer number and display the last 'signLen'[= 4] digits on the display
 void shiftSignNumber(int num)
 {
     int signModules = signLen / 2;
